@@ -37,7 +37,7 @@ func LOG(level string, formating string, args... interface{}) {
       funcname = filepath.Ext(funcname)             // .foo
       funcname = strings.TrimPrefix(funcname, ".")  // foo
 
-      filename = filepath.Base(filename)  // /full/path/basename.go => basename.go
+      // filename = filepath.Base(filename)  // /full/path/basename.go => basename.go
   }
 
   log.Printf("%s:%d:%s: %s: %s\n", filename, line, funcname, level, fmt.Sprintf(formating, args...))
@@ -52,7 +52,7 @@ func INFO() {
       funcname = filepath.Ext(funcname)             // .foo
       funcname = strings.TrimPrefix(funcname, ".")  // foo
 
-      filename = filepath.Base(filename)  // /full/path/basename.go => basename.go
+      // filename = filepath.Base(filename)  // /full/path/basename.go => basename.go
   }
 
   fmt.Printf("%s:%d:%s\n", filename, line, funcname)
